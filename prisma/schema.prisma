@@ -4,7 +4,6 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 enum Role {
@@ -57,4 +56,4 @@ model Appointment {
   client      Client            @relation(fields: [clientId], references: [id], onDelete: Cascade)
   createdAt   DateTime          @default(now())
   updatedAt   DateTime          @updatedAt
-}postgresql://neondb_owner:npg_ZI6DEvY0LbfW@ep-autumn-wind-acopdfph.sa-east-1.aws.neon.tech/neondb?sslmode=require
+}
